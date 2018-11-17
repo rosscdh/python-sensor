@@ -65,6 +65,7 @@ def boot_agent():
             from .instrumentation.aiohttp import client  # noqa
             from .instrumentation.aiohttp import server  # noqa
             from .instrumentation import asynqp  # noqa
+        from .instrumentation import flask  # noqa
         from .instrumentation import logging  # noqa
         from .instrumentation import mysqlpython  # noqa
         from .instrumentation import redis  # noqa
