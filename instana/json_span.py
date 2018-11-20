@@ -30,9 +30,11 @@ class Data(object):
     baggage = None
     custom = None
     http = None
+    log = None
     rabbitmq = None
     redis = None
     rpc = None
+    render = None
     sdk = None
     service = None
     sqlalchemy = None
@@ -51,6 +53,14 @@ class HttpData(object):
     method = None
     path_tpl = None
     error = None
+
+    def __init__(self, **kwds):
+        self.__dict__.update(kwds)
+
+
+class LogData(object):
+    message = None
+    parameters = None
 
     def __init__(self, **kwds):
         self.__dict__.update(kwds)
@@ -98,6 +108,16 @@ class RPCData(object):
     params = None
     baggage = None
     error = None
+
+    def __init__(self, **kwds):
+        self.__dict__.update(kwds)
+
+
+class RenderData(object):
+    type = None
+    name = None
+    message = None
+    parameters = None
 
     def __init__(self, **kwds):
         self.__dict__.update(kwds)
